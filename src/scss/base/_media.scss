@@ -1,0 +1,123 @@
+@media (min-width: 1199px) {
+  .header {
+    &__contacts {
+      gap: 30px;
+
+      &-label {
+        margin-left: 10px;
+        display: block;
+        font-size: 14px;
+        color: #ffffff;
+      }
+    }
+
+    .subheader {
+      &__actions {
+        .call-btn {
+          order: 2;
+          margin-right: 14px;
+          width: 170px;
+          height: 50px;
+          border-radius: 5px;
+          background-color: $green;
+
+          &__img {
+            margin-right: 10px;
+
+            svg {
+              width: 30px;
+              height: 27px;
+            }
+          }
+
+          &__text {
+            display: inline;
+            color: #ffffff;
+            font-weight: 700;
+            font-size: 18px;
+          }
+        }
+
+        .burger-menu {
+          display: none;
+        }
+
+        .menu {
+          position: static;
+          order: 1;
+          @include flex_space-between;
+          flex-direction: row;
+          width: 627px;
+          height: 20px;
+          padding: 0;
+          margin-right: 84px;
+          background-color: transparent;
+          opacity: 1;
+          overflow-y: hidden;
+          transition: none;
+
+          &__list {
+            @include flex_space-between;
+            flex-grow: 1;
+          }
+
+          &__item {
+            color: $text-black;
+            font-weight: 700;
+            opacity: 1;
+            border-bottom: none;
+
+            &:hover {
+              color: $green;
+            }
+
+            .icon-arrow-icon:before {
+              color: $text-black;
+            }
+
+            &.active {
+              color: $green;
+
+              .icon-arrow-icon:before {
+                color: $green;
+              }
+            }
+          }
+
+          &__link {
+            span {
+              margin-left: 5px;
+            }
+          }
+
+          .submenu {
+            display: none;
+            position: absolute;
+            z-index: 10;
+            padding: 7px;
+            &__item {
+              max-width: 100px;
+              color: $text-grey;
+              line-height: 25px;
+              opacity: 1;
+            }
+
+            &__link {
+              padding: 5px 0;
+              border-bottom: 1px solid $text-grey;
+
+              &:hover {
+                background-color: $green;
+                color: #ffffff;
+              }
+            }
+          }
+
+          &__footer {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}

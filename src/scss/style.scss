@@ -1,0 +1,21 @@
+@import "utils/reset";
+@import "base/variables";
+@import "base/mixins";
+@import "fonts/fonts";
+@import "fonts/icons";
+
+* {
+  font-family: "Nunito", sans-serif;
+  font-size: 16px;
+  color: $text-grey;
+}
+
+.container {
+  max-width: 1410px;
+  margin: 0 auto;
+  padding: 15px;
+}
+
+@import "./blocks/header";
+
+@import "./base/media";
