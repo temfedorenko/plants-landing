@@ -10,12 +10,20 @@
   color: $text-grey;
 }
 
-.container {
-  max-width: 1410px;
+.page {
+  max-width: 1928px;
   margin: 0 auto;
-  padding: 15px;
+}
+
+.container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
 }
 
 @import "./blocks/header";
+@import "./blocks/promo";
+@import "./blocks/title";
+@import "./blocks/button";
 
 @import "./base/media";

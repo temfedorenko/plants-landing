@@ -1,0 +1,14 @@
+.button {
+  display: block;
+  color: #ffffff;
+  background-color: $green;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.4s;
+
+  &:hover {
+    background-color: $dark-green;
+    transform: scale(0.95);
+  }
+}

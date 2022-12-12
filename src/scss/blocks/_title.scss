@@ -1,0 +1,11 @@
+.title {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 38px;
+  color: $text-black;
+
+  span {
+    font: inherit;
+    color: $green;
+  }
+}

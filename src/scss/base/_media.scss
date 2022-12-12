@@ -1,4 +1,24 @@
-@media (min-width: 1199px) {
+@media (min-width: 768px) {
+  .promo {
+    &__image {
+      width: 65%;
+      height: 400px;
+      margin: 0 auto;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1410px;
+  }
+
+  .title {
+    font-size: 58px;
+    line-height: 79px;
+  }
+
+  // HEADER
   .header {
     &__contacts {
       gap: 30px;
@@ -50,7 +70,7 @@
           width: 627px;
           height: 20px;
           padding: 0;
-          margin-right: 84px;
+          margin-right: 35px;
           background-color: transparent;
           opacity: 1;
           overflow-y: hidden;
@@ -94,7 +114,8 @@
             display: none;
             position: absolute;
             z-index: 10;
-            padding: 7px;
+            padding: 20px 7px 7px;
+            background-color: #ffffff;
             &__item {
               max-width: 100px;
               color: $text-grey;
@@ -118,6 +139,132 @@
           }
         }
       }
+    }
+  }
+
+  // PROMO
+  .promo {
+    &__wrapper {
+      position: relative;
+      padding-top: 133px;
+      padding-bottom: 100px;
+      background: linear-gradient(
+        45deg,
+        rgba(0, 115, 12, 0.81) -39.14%,
+        rgba(251, 246, 238, 0) 90.23%
+      );
+    }
+
+    &__image {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      max-width: 55%;
+      height: 95%;
+    }
+
+    &__content {
+      max-width: 39%;
+    }
+
+    &__subtitle {
+      margin-top: 0;
+      &-text {
+        font-size: 16px;
+      }
+    }
+
+    &__title {
+      margin-top: 20px;
+    }
+
+    &__descr {
+      margin-top: 20px;
+      font-size: 18px;
+      line-height: 30px;
+    }
+
+    &__actions {
+      margin-top: 50px;
+      flex-direction: row;
+      justify-content: start;
+      gap: 30px;
+    }
+
+    &__button {
+      width: 175px;
+      margin: 0;
+    }
+
+    &__how-it-works {
+      &-link {
+        line-height: 40px;
+        color: $text-grey;
+      }
+      svg {
+        transform: translateY(-1px);
+
+        path {
+          fill: $text-grey;
+        }
+      }
+    }
+
+    &__statistic {
+      justify-content: flex-start;
+      gap: 10px;
+      margin-top: 50px;
+
+      &-item {
+        @include flex_center;
+        gap: 10px;
+        width: 149px;
+        height: 50px;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 20px;
+        color: $text-black;
+        background: none;
+        border-radius: 32px;
+
+        &:last-child {
+          display: flex;
+        }
+
+        span {
+          @include flex_center;
+          flex-shrink: 0;
+          width: 50px;
+          height: 50px;
+          font-size: 15px;
+          line-height: 20px;
+          border-radius: 35px;
+          background: linear-gradient(180deg, #fff8f1 0%, #cbe5ce 100%);
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1600px) {
+  .header {
+    .subheader {
+      &__actions {
+        .menu {
+          margin-right: 84px;
+        }
+      }
+    }
+  }
+
+  .promo {
+    &__image {
+      width: 1000px;
+    }
+
+    &__wrapper {
+      background: url("../img/plants.png") left -10px bottom 60px/180px no-repeat,
+        linear-gradient(45deg, rgba(0, 115, 12, 0.81) -39.14%, rgba(251, 246, 238, 0) 90.23%);
     }
   }
 }

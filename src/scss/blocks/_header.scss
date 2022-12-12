@@ -4,6 +4,7 @@
 
     .container {
       @include flex_space-between;
+      padding: 15px;
     }
   }
 
@@ -23,18 +24,20 @@
 
   &__lang {
     &-select {
+      width: 66px;
       appearance: none;
       color: #ffffff;
       font-size: 12px;
       border: none;
       background-color: transparent;
-      background: url("../icons/arrow-icon.svg") 85% 55% / 12% no-repeat;
+      background: url("../icons/arrow-icon.svg") 75% 55% / 12% no-repeat;
     }
   }
 
   .subheader {
     .container {
       position: relative;
+      padding: 15px;
       @include flex_space-between;
     }
 
@@ -109,7 +112,7 @@
       flex-direction: column;
       width: 100%;
       height: calc(100vh - 127px);
-      padding: 15px 15px 20px;
+      padding: 15px 15px 90px;
       background-color: $dark-green;
       opacity: 0;
       overflow-y: scroll;
