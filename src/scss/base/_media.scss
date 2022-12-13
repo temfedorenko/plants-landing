@@ -5,17 +5,31 @@
       height: 400px;
       margin: 0 auto;
     }
+
+    &__statistic {
+      &-item {
+        &:last-child {
+          display: flex;
+        }
+      }
+    }
   }
 }
 
 @media (min-width: 1024px) {
   .container {
-    max-width: 1410px;
+    max-width: 1440px;
   }
 
   .title {
     font-size: 58px;
     line-height: 79px;
+  }
+
+  .descr {
+    font-size: 18px;
+    line-height: 30px;
+    text-align: center;
   }
 
   // HEADER
@@ -227,10 +241,6 @@
         background: none;
         border-radius: 32px;
 
-        &:last-child {
-          display: flex;
-        }
-
         span {
           @include flex_center;
           flex-shrink: 0;
@@ -240,6 +250,56 @@
           line-height: 20px;
           border-radius: 35px;
           background: linear-gradient(180deg, #fff8f1 0%, #cbe5ce 100%);
+        }
+      }
+    }
+  }
+
+  // SERVICES
+  .services {
+    &__wrapper {
+      padding-top: 100px;
+    }
+
+    &__descr {
+      margin-top: 30px;
+    }
+
+    &__items {
+      gap: 30px;
+      margin-top: 50px;
+    }
+
+    .service {
+      padding: 60px 43px;
+      padding-top: 180px;
+      max-width: 330px;
+
+      &__title {
+        font-size: 24px;
+        line-height: 33px;
+        text-align: center;
+      }
+
+      &__description {
+        text-align: center;
+        font-size: 16px;
+        line-height: 28px;
+      }
+
+      &__img {
+        left: 50%;
+        transform: translateX(-50%);
+        top: 26px;
+        justify-content: center;
+        padding-left: 0;
+        width: 176px;
+        height: 145px;
+
+        &-icon {
+          padding-top: 0;
+          width: 70px;
+          height: 70px;
         }
       }
     }
@@ -265,6 +325,12 @@
     &__wrapper {
       background: url("../img/plants.png") left -10px bottom 60px/180px no-repeat,
         linear-gradient(45deg, rgba(0, 115, 12, 0.81) -39.14%, rgba(251, 246, 238, 0) 90.23%);
+    }
+  }
+
+  .services {
+    &__wrapper {
+      background: url("../img/services-bg.png") right bottom 42%/235px no-repeat;
     }
   }
 }
