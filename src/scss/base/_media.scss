@@ -128,11 +128,12 @@
             display: none;
             position: absolute;
             z-index: 10;
-            padding: 20px 7px 7px;
-            background-color: #ffffff;
+            top: 80px;
+            width: 180px;
+            padding: 7px 15px;
+            background: linear-gradient(45deg, rgb(0, 115, 12) -39.14%, rgb(251, 246, 238) 90.23%);
             &__item {
-              max-width: 100px;
-              color: $text-grey;
+              color: $text-black;
               line-height: 25px;
               opacity: 1;
             }
@@ -304,6 +305,111 @@
       }
     }
   }
+
+  // ABOUT
+  .about {
+    &__wrapper {
+      padding: 100px 0;
+    }
+
+    &__title {
+      color: $green;
+      font-size: 45px;
+      line-height: 61px;
+      text-align: left;
+    }
+
+    &__descr {
+      font-size: 16px;
+      text-align: left;
+    }
+
+    &__values {
+      width: 690px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 50px;
+    }
+
+    &__value {
+      justify-content: start;
+      flex-direction: row;
+      gap: 30px;
+      width: 330px;
+      height: 97px;
+      padding-left: 30px;
+      box-shadow: none;
+
+      &-img {
+        width: 67px;
+        height: 67px;
+      }
+
+      &-title {
+        font-size: 24px;
+        color: $text-black;
+      }
+    }
+
+    &__button {
+      margin-top: 50px;
+      width: 190px;
+      height: 58px;
+      font-size: 18px;
+      line-height: 58px;
+    }
+  }
+}
+
+@media (min-width: 1400px) {
+  .about {
+    .container {
+      display: flex;
+      justify-content: space-between;
+      height: 903px;
+    }
+
+    &__images {
+      flex-shrink: 0;
+      width: 660px;
+      height: 903px;
+      padding: 36px 24px;
+      margin-right: 27px;
+
+      &-bg {
+        width: 450px;
+        height: 706px;
+      }
+
+      &-main-img {
+        width: 580px;
+        height: 741px;
+      }
+
+      &-second-img {
+        bottom: 0;
+        width: 458px;
+        height: 356px;
+      }
+    }
+
+    &__content {
+      padding: 45px 0;
+    }
+
+    &__title {
+      margin-top: 0;
+    }
+
+    &__descr {
+      margin-top: 30px;
+      line-height: 28px;
+    }
+
+    &__button {
+      margin: 50px 0 0;
+    }
+  }
 }
 
 @media (min-width: 1600px) {
@@ -331,6 +437,12 @@
   .services {
     &__wrapper {
       background: url("../img/services-bg.png") right bottom 42%/235px no-repeat;
+    }
+  }
+
+  .about {
+    &__wrapper {
+      background: url("../img/bg-about.png") left top 160px/340px no-repeat;
     }
   }
 }
