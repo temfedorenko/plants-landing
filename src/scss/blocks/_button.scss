@@ -1,5 +1,7 @@
 .button {
-  display: block;
+  @include flex_center;
+  width: 167px;
+  height: 40px;
   color: #ffffff;
   background-color: $green;
   border: none;
