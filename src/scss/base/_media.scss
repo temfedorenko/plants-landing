@@ -14,6 +14,14 @@
       }
     }
   }
+
+  .choose-us {
+    &__wrapper {
+      padding: 50px 0;
+      background: url("../img/left-bg.png") left -30px top 70px/180px no-repeat,
+        url("../img/right-bg.png") right top/180px no-repeat, $dark-green;
+    }
+  }
 }
 
 @media (min-width: 1024px) {
@@ -22,14 +30,20 @@
   }
 
   .title {
-    font-size: 58px;
-    line-height: 79px;
+    font-size: 45px;
+    line-height: 61px;
   }
 
   .descr {
+    margin-top: 30px;
     font-size: 18px;
     line-height: 30px;
     text-align: center;
+  }
+
+  .button {
+    margin-top: 50px;
+    height: 58px;
   }
 
   // HEADER
@@ -191,6 +205,8 @@
 
     &__title {
       margin-top: 20px;
+      font-size: 58px;
+      line-height: 79px;
     }
 
     &__descr {
@@ -262,10 +278,6 @@
       padding-top: 100px;
     }
 
-    &__descr {
-      margin-top: 30px;
-    }
-
     &__items {
       gap: 30px;
       margin-top: 50px;
@@ -312,18 +324,6 @@
       padding: 100px 0;
     }
 
-    &__title {
-      color: $green;
-      font-size: 45px;
-      line-height: 61px;
-      text-align: left;
-    }
-
-    &__descr {
-      font-size: 16px;
-      text-align: left;
-    }
-
     &__values {
       width: 690px;
       margin-left: auto;
@@ -352,11 +352,96 @@
     }
 
     &__button {
-      margin-top: 50px;
       width: 190px;
-      height: 58px;
-      font-size: 18px;
-      line-height: 58px;
+    }
+  }
+
+  // WHY CHOOSE US
+  .choose-us {
+    &__wrapper {
+      padding: 100px 0;
+    }
+
+    &__button {
+      width: 190px;
+    }
+  }
+
+  // WORKING PROCESS
+
+  .working-process {
+    &__wrapper {
+      padding: 100px 0;
+    }
+
+    &__items {
+      max-width: 700px;
+      gap: 30px;
+    }
+
+    &__item {
+      padding: 55px 30px 70px;
+      max-width: 320px;
+
+      &-bg-green,
+      &-bg-white {
+        height: 165px;
+        top: 110px;
+        right: 40px;
+      }
+
+      &-img {
+        width: 70px;
+        height: 70px;
+      }
+
+      &-number {
+        top: 30px;
+        right: 30px;
+        font-size: 78px;
+        line-height: 120px;
+      }
+
+      &-title {
+        margin-top: 40px;
+        font-size: 24px;
+        line-height: 33px;
+      }
+
+      &-description {
+        margin-top: 20px;
+        font-size: 18px;
+        line-height: 30px;
+      }
+    }
+
+    &__footer {
+      padding: 0 60px 0 0;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      height: 247px;
+
+      &-wrapper {
+        width: 705px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 85px;
+      }
+
+      &-text {
+        font-size: 33px;
+        line-height: 45px;
+        text-align: left;
+      }
+    }
+
+    &__button {
+      width: 170px;
+      height: 50px;
+      margin: 0;
+      flex-shrink: 0;
     }
   }
 }
@@ -399,15 +484,82 @@
 
     &__title {
       margin-top: 0;
+      color: $green;
+      text-align: left;
     }
 
     &__descr {
-      margin-top: 30px;
+      font-size: 16px;
+      text-align: left;
       line-height: 28px;
     }
 
     &__button {
       margin: 50px 0 0;
+    }
+  }
+
+  .choose-us {
+    &__wrapper {
+      background: url("../img/right-bg.png") right top/320px no-repeat, $dark-green;
+    }
+    .container {
+      display: flex;
+      justify-content: space-between;
+      background-color: $dark-green;
+    }
+
+    &__image {
+      flex-shrink: 0;
+      order: 2;
+      max-width: 672px;
+      height: 426px;
+      margin-left: 82px;
+    }
+
+    &__title {
+      margin-top: 0;
+      text-align: left;
+    }
+
+    &__descr {
+      text-align: left;
+    }
+
+    &__reasons {
+      justify-content: space-between;
+      margin-top: 50px;
+      padding-right: 56px;
+      height: 86px;
+    }
+
+    &__reason {
+      width: 242px;
+      &-icon {
+        width: 30px;
+        height: 30px;
+        background: url("../icons/reason-icon.svg") center no-repeat, #ffffff;
+      }
+      &-title {
+        font-size: 24px;
+      }
+    }
+
+    &__button {
+      margin: 50px 0 0;
+
+      &:hover {
+        color: $green;
+        border: 1px solid $green;
+        background-color: #ffffff;
+      }
+    }
+  }
+
+  .working-process {
+    &__items {
+      max-width: 1410px;
+      justify-content: space-between;
     }
   }
 }
@@ -443,6 +595,13 @@
   .about {
     &__wrapper {
       background: url("../img/bg-about.png") left top 160px/340px no-repeat;
+    }
+  }
+
+  .choose-us {
+    &__wrapper {
+      background: url("../img/left-bg.png") left bottom/360px no-repeat,
+        url("../img/right-bg.png") right top/360px no-repeat, $dark-green;
     }
   }
 }

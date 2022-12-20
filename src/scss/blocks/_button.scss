@@ -13,4 +13,21 @@
     background-color: $dark-green;
     transform: scale(0.95);
   }
+
+  &_white {
+    width: 137px;
+    height: 40px;
+    background: #ffffff;
+
+    span {
+      color: $green;
+    }
+    &:hover {
+      background-color: $green;
+
+      span {
+        color: #ffffff;
+      }
+    }
+  }
 }

@@ -1,20 +1,6 @@
-.descr {
-  font-size: 14px;
-  line-height: 22px;
-  text-align: center;
-}
-
 .services {
   &__wrapper {
     padding-top: 50px;
-  }
-
-  &__title {
-    text-align: center;
-  }
-
-  &__descr {
-    margin-top: 15px;
   }
 
   &__items {
@@ -27,7 +13,6 @@
 
   .service {
     position: relative;
-    z-index: 223333;
     display: block;
     padding: 20px;
     padding-left: 90px;
@@ -63,7 +48,6 @@
       }
     }
     &__title {
-      position: relative;
       font-weight: 700;
       font-size: 16px;
       line-height: 22px;
@@ -72,7 +56,6 @@
     }
 
     &__description {
-      position: relative;
       margin-top: 10px;
       text-align: left;
       transition: inherit;
