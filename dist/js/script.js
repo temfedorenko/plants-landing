@@ -67,16 +67,12 @@ window.addEventListener("DOMContentLoaded", () => {
     slidesPerView: 1,
 
     breakpoints: {
-      // when window width is >= 320px
       768: {
         slidesPerView: 2,
       },
 
       1400: {
         slidesPerView: 4,
-        pagination: {
-          el: null,
-        },
       },
     },
   });
