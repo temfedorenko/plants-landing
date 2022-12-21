@@ -58,4 +58,26 @@ window.addEventListener("DOMContentLoaded", () => {
       closeBurgerMenu();
     }
   });
+
+  const swiper = new Swiper(".swiper", {
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    slidesPerView: 1,
+
+    breakpoints: {
+      // when window width is >= 320px
+      768: {
+        slidesPerView: 2,
+      },
+
+      1400: {
+        slidesPerView: 4,
+        pagination: {
+          el: null,
+        },
+      },
+    },
+  });
 });

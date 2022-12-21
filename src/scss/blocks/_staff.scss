@@ -1,0 +1,115 @@
+.swiper-pagination {
+  position: relative;
+  margin-top: 30px;
+}
+
+.swiper-pagination-bullet {
+  position: relative;
+  width: 20px;
+  height: 6px;
+  background: $green;
+  border-radius: 8px;
+  opacity: 1;
+  transition: all 0.4s;
+
+  &-active {
+    width: 50px;
+  }
+}
+
+.swiper-slide {
+  @include flex_center;
+}
+
+.swiper-wrapper {
+  @include flex_space-between;
+}
+
+.staff {
+  &__wrapper {
+    padding-top: 50px;
+  }
+
+  &__button {
+    margin: 30px auto 0;
+  }
+
+  &__members {
+    margin: 40px auto 30px;
+    max-width: 345px;
+  }
+
+  &__member {
+    position: relative;
+    max-width: 330px;
+    height: 343px;
+    border-radius: 10px;
+    overflow-y: hidden;
+
+    &-bg {
+      width: 100%;
+      height: 100%;
+
+      img {
+        @include image_positioning;
+      }
+    }
+
+    &:hover {
+      .staff__member-overlay {
+        padding: 147px 0;
+        transform: translateY(0);
+      }
+
+      .staff__member-social {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+
+    &-overlay {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      transform: translateY(80%);
+      padding: 7px 0;
+      background: linear-gradient(6.68deg, #00730c 4.95%, rgba(251, 246, 238, 0) 264.79%);
+      border-radius: 5px;
+      transition: all 0.5s ease-out;
+    }
+
+    &-name {
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 25px;
+      text-align: center;
+      color: #ffffff;
+    }
+
+    &-position {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 22px;
+      text-align: center;
+      color: #ffffff;
+    }
+
+    &-social {
+      @include flex_center;
+      flex-wrap: wrap;
+      margin-top: 20px;
+      gap: 25px;
+      visibility: hidden;
+      opacity: 0;
+      transition: all 0.5s ease-out;
+
+      &-item {
+        svg {
+          width: 30px;
+          height: 30px;
+        }
+      }
+    }
+  }
+}

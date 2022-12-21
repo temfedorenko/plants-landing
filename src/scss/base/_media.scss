@@ -22,6 +22,16 @@
         url("../img/right-bg.png") right top/180px no-repeat, $dark-green;
     }
   }
+
+  .staff {
+    &__members {
+      max-width: 700px;
+    }
+
+    &__member {
+      height: 408px;
+    }
+  }
 }
 
 @media (min-width: 1024px) {
@@ -561,6 +571,20 @@
       max-width: 1410px;
       justify-content: space-between;
     }
+  }
+
+  .staff {
+    &__members {
+      max-width: 1430px;
+    }
+  }
+
+  .swiper-slide {
+    max-width: 330px;
+  }
+
+  .swiper-pagination {
+    display: none;
   }
 }
 
